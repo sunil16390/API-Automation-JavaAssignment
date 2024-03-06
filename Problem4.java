@@ -10,6 +10,10 @@ public class ArithmeticOperation
     {
         ArithmeticOperation ao = new ArithmeticOperation();
         ao.simpleArithmetic(12,5,"division");
+        ao.simpleArithmetic(12,5,"subs");
+        ao.simpleArithmetic(12,5,"multiplication");
+        ao.simpleArithmetic(12,5,"division");
+        ao.simpleArithmetic(12,5,"hi");
     }
     public void simpleArithmetic(int first_num, int second_num, String operator)
     {
