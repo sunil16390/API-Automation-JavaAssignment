@@ -9,17 +9,24 @@ public class ForLoopMatchingNumber
 
     public static void main(String[] args)
     {
-        matchingNumber();
+        int numberToSearch = 808; // assign the number to be searched
+        if(matchingNumber(numberToSearch)==numberToSearch)
+        {
+            System.out.println("The number found as "+numberToSearch);
+        }
+        else System.out.println(numberToSearch+" not found");
     }
-    public static void matchingNumber()
+    public static int matchingNumber(int num)
     {
+        int matchValue = 0;
         for (int i=500; i<=1000; i++)
         {
-            if (i==808)
+            if (i==num)
             {
-                System.out.println("the number found as 808");
+                matchValue = i;
+                i=1001; // Once the number found loop will stop due to this statement
             }
-
         }
+        return matchValue;
     }
 }
