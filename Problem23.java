@@ -29,16 +29,19 @@ public class TryCatchFinally
         Properties prop = new Properties();
         String value = null;
         try {
-            prop.load(new FileInputStream(System.getProperty("user.dir") + "/global.properties"));
+            //wrong file name is provided, when correction "No Exception" will be printed
+            prop.load(new FileInputStream(System.getProperty("user.dir") + "/wrong_global.properties"));
             value = prop.getProperty(key);
+            System.out.println("No Exception");
 
-        }catch (IOException e)
+        }catch(IOException e)
         {
-            e.printStackTrace();
+            System.out.println("File not found");
+
         }
         finally
         {
-            System.out.println("You are reading global.properties file for the value of: "+key);
+            System.out.println("You are reading global.properties file for the value of "+key);
         }
         return value;
     }
